@@ -1,23 +1,23 @@
 #### nodejs 설치
 ##### linux-x64
 - nodejs 공식 홈페이지에서 linux64 바이너리파일 다운로드.
-- 압축파일을 풀 폴더 생성
+- 압축파일을 풀 폴더 생성<br>
 	`$ sudo mkdir -p /usr/local/lib/nodejs`
 	
-- 환경 변수 설정
+- 환경 변수 설정<br>
 	`$ vi ~/.profile` 로 .profile을 열고 가장 하단에 아래 코드 추가하자.
 	```
 	VERSION = v14.10.0  # 다운받은 파일의 버전을 입력하면됨.
 	DISTRO = linux-x64
 	export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 	```
-- ./profile 새로고침
+- ./profile 새로고침<br>
 	`. ~/.profile`
-- 설치가 완료되었다. 아래 명령어로 설치가 제대로 되었는지 확인해보자
-	`$ node -v`
-	`$ npm version`
-	`$ npx -v`
-	아래와 같은 형식으로 출력되면 제대로 설치된 것!
+- 설치가 완료되었다. 아래 명령어로 설치가 제대로 되었는지 확인해보자<br>
+	`$ node -v`<br>
+	`$ npm version`<br>
+	`$ npx -v`<br>
+	아래와 같은 형식으로 출력되면 제대로 설치된 것!<br>
 	```
 	➜  node -v
 	v14.10.0
