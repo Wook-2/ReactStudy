@@ -1,23 +1,24 @@
-#### nodejs 설치
+#### nodejs 설치 
+우선 나는 .. `$ sudo apt-get install nodejs`명령어에서 패키지 에러가 발생하여 이 방법으로는 설치를 하지 못하였고, 바이너리 파일을 다운받아 압축을 푸는 방법으로 설치를 하였다.
 ##### linux-x64
 - nodejs 공식 홈페이지에서 linux64 바이너리파일 다운로드.
-- 압축파일을 풀 폴더 생성<br>
+- 압축파일을 풀 폴더 생성
 	`$ sudo mkdir -p /usr/local/lib/nodejs`
 	
-- 환경 변수 설정<br>
+- 환경 변수 설정
 	`$ vi ~/.profile` 로 .profile을 열고 가장 하단에 아래 코드 추가하자.
 	```
 	VERSION = v14.10.0  # 다운받은 파일의 버전을 입력하면됨.
 	DISTRO = linux-x64
 	export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 	```
-- ./profile 새로고침<br>
+- ./profile 새로고침
 	`. ~/.profile`
-- 설치가 완료되었다. 아래 명령어로 설치가 제대로 되었는지 확인해보자<br>
-	`$ node -v`<br>
-	`$ npm version`<br>
-	`$ npx -v`<br>
-	아래와 같은 형식으로 출력되면 제대로 설치된 것!<br>
+- 설치가 완료되었다. 아래 명령어로 설치가 제대로 되었는지 확인해보자
+	`$ node -v`
+	`$ npm version`
+	`$ npx -v`
+	아래와 같은 형식으로 출력되면 제대로 설치된 것!
 	```
 	➜  node -v
 	v14.10.0
@@ -40,3 +41,9 @@
 	➜ npx -v
 	6.14.8
 	```
+
+#### React!
+##### 위 설치를 제대로 수행했다는 가정 하에 
+1. 프로젝트 폴더로 이동
+2. `$ npx create-react-app { app_name }` 명령어를 실행하면 app_name이라는 폴더명을 가진 react 개발을 할 수 있는 폴더(환경)가 생성된다. **wow**
+
