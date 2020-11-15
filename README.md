@@ -45,5 +45,22 @@
 #### React!
 ##### 위 설치를 제대로 수행했다는 가정 하에 
 1. 프로젝트 폴더로 이동
-2. `$ npx create-react-app { app_name }` 명령어를 실행하면 app_name이라는 폴더명을 가진 react 개발을 할 수 있는 폴더(환경)가 생성된다. **wow**
+2. `$ npx create-react-app { app_name }` 명령어를 실행하면 app_name이라는 폴더명을 가진 react 개발을 할 수 있는 폴더(환경)가 생성된다. **wow**<br>
+
+
+### prop-types
+#### 전달하는 props값이 올바른지 확인해주는 패키지(?)
+- Install
+	- `npm i prop-types` 
+- Usage
+	Component.js<br>
+	``` javascript
+	import Proptypes from "prop-types";
+	
+	Component.proptypes = {
+		prop : Proptypes.string.isRequired
+	}
+	```
+	와 같은식으로 사용 하여 전달하려는 값의 타입, 조건 등을 console창에서 체크할 수 있다.
+
 
