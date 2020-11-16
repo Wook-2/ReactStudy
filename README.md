@@ -42,8 +42,8 @@
 	6.14.8
 	```
 
-#### React!
-##### 위 설치를 제대로 수행했다는 가정 하에 
+### React!
+#### 위 설치를 제대로 수행했다는 가정 하에 
 1. 프로젝트 폴더로 이동
 2. `$ npx create-react-app { app_name }` 명령어를 실행하면 app_name이라는 폴더명을 가진 react 개발을 할 수 있는 폴더(환경)가 생성된다. **wow**<br>
 
@@ -63,4 +63,89 @@
 	```
 	와 같은식으로 사용 하여 전달하려는 값의 타입, 조건 등을 console창에서 체크할 수 있다.
 
+### React Exam
+#### App.js
+컴포넌트 기본 사용법  (코드백업)
+```javascript
 
+import PropTypes from "prop-types";
+
+function Fruit({fav}){
+  return <h3>I like {fav}</h3>
+}
+
+Fruit.propTypes = {
+  fav : PropTypes.string.isRequired
+};
+
+const arr = [
+  {name : "byungwook"},
+  {name : "wook"},
+]
+
+function App() {
+  var a = "ASD";
+
+  return (
+    <div className="App">
+      prop값 전달하기
+      <Fruit fav = "apple"/>
+      변수 선언해서 아래와 같은방법으로도  값 전달 가능
+      <Fruit fav={a}/>
+      map함수 활용해서 동적으로 html생성하기
+      {arr.map(function(current){
+        return <Fruit key = {current.name} fav = {current.name}/>
+      })}
+    </div>
+  );
+}
+export default App;
+
+```
+
+### javascript function
+#### function statement
+`function a() { console.log('a'); }`
+#### function expression
+`var b = function() { console.log('b'); };`<br>
+`var c = () => { console.log('c'); };`
+#### function 생성자
+`var d = new Function("console.log('d')")`
+
+
+### Component LifeCycle
+#### Mounting
+constructor
+```javascript
+	constructor(props){
+		super(props);
+		console.log("constructor");
+	}
+```
+rendering
+```javascript
+	render(){
+		console.log("Rendering");
+		return <h1>Hello!</h1>
+	}
+```
+componentDidMount
+```javascript
+	componentDidMount(){
+		console.log("Did Mounting!");
+	}
+```
+#### Update
+render
+componentDidUpdate
+```javascript
+	componentDidUpdate(){
+		console.log("Did update!");
+	}
+```
+#### Unmount
+componentWillUnmount
+```javascript
+	componentWillUnmount(){
+		console.log("Goodbye.");
+	}
